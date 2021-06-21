@@ -1,6 +1,9 @@
 [book]
 authors = ["ousttrue"]
-language = "en"
+language = "ja"
 multilingual = false
 src = "src"
 title = "Rust 練習帳"
+
+[output.html]
+git-repository-url = "https://github.com/ousttrue/rust_exercise_book"
