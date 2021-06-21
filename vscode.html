@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Path - Rust 練習帳</title>
+        <title>vscode - Rust 練習帳</title>
                 
 
         <!-- Custom HTML head -->
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">A Prefix Chapter</a></li><li class="chapter-item expanded affix "><li class="part-title">開発環境</li><li class="chapter-item expanded "><a href="vscode.html"><strong aria-hidden="true">1.</strong> vscode</a></li><li class="chapter-item expanded affix "><li class="part-title">string</li><li class="chapter-item expanded "><a href="string.html"><strong aria-hidden="true">2.</strong> String</a></li><li class="chapter-item expanded "><a href="cstring.html"><strong aria-hidden="true">3.</strong> CString</a></li><li class="chapter-item expanded "><a href="osstring.html"><strong aria-hidden="true">4.</strong> OSString</a></li><li class="chapter-item expanded "><a href="path.html" class="active"><strong aria-hidden="true">5.</strong> Path</a></li><li class="chapter-item expanded "><a href="args.html"><strong aria-hidden="true">6.</strong> Args</a></li><li class="chapter-item expanded affix "><li class="part-title">collection</li><li class="chapter-item expanded "><a href="vec.html"><strong aria-hidden="true">7.</strong> Vec</a></li><li class="chapter-item expanded affix "><li class="part-title">option result error</li><li class="chapter-item expanded "><a href="option.html"><strong aria-hidden="true">8.</strong> Option</a></li><li class="chapter-item expanded "><a href="result.html"><strong aria-hidden="true">9.</strong> Result</a></li><li class="chapter-item expanded affix "><li class="part-title">file</li><li class="chapter-item expanded "><a href="io.html"><strong aria-hidden="true">10.</strong> io</a></li><li class="chapter-item expanded affix "><li class="part-title">rc</li><li class="chapter-item expanded "><a href="rc.html"><strong aria-hidden="true">11.</strong> Rc</a></li><li class="chapter-item expanded affix "><li class="part-title">mutability</li><li class="chapter-item expanded "><a href="refcell.html"><strong aria-hidden="true">12.</strong> RefCell</a></li><li class="chapter-item expanded affix "><li class="part-title">allow</li><li class="chapter-item expanded "><a href="allow.html"><strong aria-hidden="true">13.</strong> allow</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">A Prefix Chapter</a></li><li class="chapter-item expanded affix "><li class="part-title">開発環境</li><li class="chapter-item expanded "><a href="vscode.html" class="active"><strong aria-hidden="true">1.</strong> vscode</a></li><li class="chapter-item expanded affix "><li class="part-title">string</li><li class="chapter-item expanded "><a href="string.html"><strong aria-hidden="true">2.</strong> String</a></li><li class="chapter-item expanded "><a href="cstring.html"><strong aria-hidden="true">3.</strong> CString</a></li><li class="chapter-item expanded "><a href="osstring.html"><strong aria-hidden="true">4.</strong> OSString</a></li><li class="chapter-item expanded "><a href="path.html"><strong aria-hidden="true">5.</strong> Path</a></li><li class="chapter-item expanded "><a href="args.html"><strong aria-hidden="true">6.</strong> Args</a></li><li class="chapter-item expanded affix "><li class="part-title">collection</li><li class="chapter-item expanded "><a href="vec.html"><strong aria-hidden="true">7.</strong> Vec</a></li><li class="chapter-item expanded affix "><li class="part-title">option result error</li><li class="chapter-item expanded "><a href="option.html"><strong aria-hidden="true">8.</strong> Option</a></li><li class="chapter-item expanded "><a href="result.html"><strong aria-hidden="true">9.</strong> Result</a></li><li class="chapter-item expanded affix "><li class="part-title">file</li><li class="chapter-item expanded "><a href="io.html"><strong aria-hidden="true">10.</strong> io</a></li><li class="chapter-item expanded affix "><li class="part-title">rc</li><li class="chapter-item expanded "><a href="rc.html"><strong aria-hidden="true">11.</strong> Rc</a></li><li class="chapter-item expanded affix "><li class="part-title">mutability</li><li class="chapter-item expanded "><a href="refcell.html"><strong aria-hidden="true">12.</strong> RefCell</a></li><li class="chapter-item expanded affix "><li class="part-title">allow</li><li class="chapter-item expanded "><a href="allow.html"><strong aria-hidden="true">13.</strong> allow</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -146,17 +146,35 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="path"><a class="header" href="#path">Path</a></h1>
+                        <h1 id="vscode"><a class="header" href="#vscode">vscode</a></h1>
+<h2 id="language-server"><a class="header" href="#language-server">language server</a></h2>
+<p><a href="https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer">https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer</a></p>
+<h2 id="debugger"><a class="header" href="#debugger">debugger</a></h2>
+<p><a href="https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb">https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb</a></p>
+<p>launch.json</p>
+<pre><code class="language-json">{
+    &quot;type&quot;: &quot;lldb&quot;,
+    &quot;request&quot;: &quot;launch&quot;,
+    &quot;name&quot;: &quot;Debug&quot;,
+    &quot;cargo&quot;: {
+        &quot;args&quot;: [
+            &quot;build&quot;,
+        ]
+    },
+    &quot;args&quot;: [],
+    &quot;cwd&quot;: &quot;${workspaceFolder}&quot;
+}
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                                                    <a rel="prev" href="osstring.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                                    <a rel="prev" href="index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
-                                                    <a rel="next" href="args.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                                    <a rel="next" href="string.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -166,11 +184,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                                    <a rel="prev" href="osstring.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                    <a rel="prev" href="index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
-                                    <a rel="next" href="args.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                    <a rel="next" href="string.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                             </nav>
